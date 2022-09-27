@@ -10,6 +10,6 @@ use Illuminate\Http\Request;
 class StuffController extends Controller
 {
     public function index() {
-        return Stuff::with('variation')->get();
+        return Stuff::with(['variation', 'category'])->get();
     }
 }
