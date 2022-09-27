@@ -9,7 +9,11 @@ class Stuff extends Model
 {
     use HasFactory;
     public function category() {
-        return $this->hasOne(Category::class);
+        return $this->belongsTo(Category::class);
+
+    }
+    public function variation() {
         return $this->hasMany(Variation::class);
+
     }
 }
